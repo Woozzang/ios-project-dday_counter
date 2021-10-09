@@ -9,19 +9,29 @@ import UIKit
 
 class DdayCreatorViewController: UIViewController {
   
-  @IBOutlet weak var datePicker: UIDatePicker! {
+  // MARK: - IBOutlet
+  
+  @IBOutlet private weak var datePicker: UIDatePicker! {
     didSet {
       datePicker.tintColor = .systemGreen
+      
+      if #available(iOS 14.0, *) {
+        datePicker.preferredDatePickerStyle = .inline
+      } else {
+        datePicker.preferredDatePickerStyle = .wheels
+      }
     }
   }
   
-  @IBOutlet weak var registerButton: UIButton! {
+  @IBOutlet private weak var registerButton: UIButton! {
     didSet {
       registerButton.layer.cornerRadius = 10
     }
   }
   
-  @IBOutlet weak var dayNameTextField: UITextField!
+  @IBOutlet private weak var dayNameTextField: UITextField!
+  
+  // MARK: - Property
   
   private let dateFormatter: DateFormatter = {
     
@@ -31,23 +41,15 @@ class DdayCreatorViewController: UIViewController {
     
   }()
   
+  // MARK: - Life Cycle
   required init?(coder: NSCoder) {
     
     super.init(coder: coder)
     
-    tabBarItem.image = UIImage(systemName: "plus")
+    tabBarItem = UITabBarItem(title: "New", image: UIImage(systemName: "plus"), tag: 1)
   }
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    
-    }
-  
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    
-  }
-
+  // MARK: - IBAction
   
   @IBAction func didTapRegisterButton(_ sender: Any) {
     
@@ -66,11 +68,12 @@ class DdayCreatorViewController: UIViewController {
       return
     }
     
-    let anchorDate = datePicker.date
+    let anchorDate = dateFormatter.timeToZero(datePicker.date)
     
     let dday = Dday(dayName: dayName, anchorDate: anchorDate)
     
     DdayDataManger.shared.addDday(dday)
+    
     
     let alertController = UIAlertController(title: "기념일 추가 완료!! 🥳", message: nil, preferredStyle: .alert)
     
@@ -79,7 +82,15 @@ class DdayCreatorViewController: UIViewController {
     alertController.addAction(okAction)
     
     present(alertController, animated: true, completion: nil)
+    
+    NotificationCenter.default.post(name: type(of: self).didAddNewDday, object: nil)
   }
 }
+
+// MARK: - Notification
+
+extension DdayCreatorViewController {
   
+  static let didAddNewDday = Notification.Name.init("didAddNewDday")
+}
 

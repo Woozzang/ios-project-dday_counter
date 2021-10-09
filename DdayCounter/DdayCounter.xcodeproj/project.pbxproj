@@ -17,6 +17,8 @@
 		DD589142271083CF00CB46E0 /* DdayCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD589141271083CF00CB46E0 /* DdayCollectionViewController.swift */; };
 		DD589144271175CF00CB46E0 /* DdayDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD589143271175CF00CB46E0 /* DdayDataManger.swift */; };
 		DD5891462711768E00CB46E0 /* Dday.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5891452711768E00CB46E0 /* Dday.swift */; };
+		DD58914827119A0D00CB46E0 /* DateFormatter+timeToZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58914727119A0D00CB46E0 /* DateFormatter+timeToZero.swift */; };
+		DD58914A27119AD500CB46E0 /* UIColor+getRandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58914927119AD500CB46E0 /* UIColor+getRandomColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		DD589141271083CF00CB46E0 /* DdayCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayCollectionViewController.swift; sourceTree = "<group>"; };
 		DD589143271175CF00CB46E0 /* DdayDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayDataManger.swift; sourceTree = "<group>"; };
 		DD5891452711768E00CB46E0 /* Dday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dday.swift; sourceTree = "<group>"; };
+		DD58914727119A0D00CB46E0 /* DateFormatter+timeToZero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+timeToZero.swift"; sourceTree = "<group>"; };
+		DD58914927119AD500CB46E0 /* UIColor+getRandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+getRandomColor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,19 +68,77 @@
 		DD58912827107BFB00CB46E0 /* DdayCounter */ = {
 			isa = PBXGroup;
 			children = (
+				DD58914F2711A8FB00CB46E0 /* Global */,
+				DD5891512711A92900CB46E0 /* Screen */,
+				DD58914E2711A8F500CB46E0 /* Model */,
+				DD58914B2711A8C400CB46E0 /* Support */,
+			);
+			path = DdayCounter;
+			sourceTree = "<group>";
+		};
+		DD58914B2711A8C400CB46E0 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				DD58913427107BFE00CB46E0 /* LaunchScreen.storyboard */,
+				DD58913227107BFE00CB46E0 /* Assets.xcassets */,
+				DD58913727107BFE00CB46E0 /* Info.plist */,
 				DD58912927107BFB00CB46E0 /* AppDelegate.swift */,
 				DD58912B27107BFB00CB46E0 /* SceneDelegate.swift */,
-				DD58912F27107BFB00CB46E0 /* Main.storyboard */,
-				DD58913227107BFE00CB46E0 /* Assets.xcassets */,
-				DD58913427107BFE00CB46E0 /* LaunchScreen.storyboard */,
-				DD58913727107BFE00CB46E0 /* Info.plist */,
-				DD58913D27107F5700CB46E0 /* DdayCreatorViewController.swift */,
-				DD58913F2710827B00CB46E0 /* DdayCollectionViewCell.swift */,
-				DD589141271083CF00CB46E0 /* DdayCollectionViewController.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		DD58914E2711A8F500CB46E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				DD589143271175CF00CB46E0 /* DdayDataManger.swift */,
 				DD5891452711768E00CB46E0 /* Dday.swift */,
 			);
-			path = DdayCounter;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD58914F2711A8FB00CB46E0 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				DD5891502711A90100CB46E0 /* Extension */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		DD5891502711A90100CB46E0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DD58914727119A0D00CB46E0 /* DateFormatter+timeToZero.swift */,
+				DD58914927119AD500CB46E0 /* UIColor+getRandomColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DD5891512711A92900CB46E0 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				DD5891532711A95600CB46E0 /* View */,
+				DD5891522711A93A00CB46E0 /* ViewController */,
+				DD58912F27107BFB00CB46E0 /* Main.storyboard */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		DD5891522711A93A00CB46E0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD58913D27107F5700CB46E0 /* DdayCreatorViewController.swift */,
+				DD589141271083CF00CB46E0 /* DdayCollectionViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DD5891532711A95600CB46E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD58913F2710827B00CB46E0 /* DdayCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD58914827119A0D00CB46E0 /* DateFormatter+timeToZero.swift in Sources */,
 				DD58913E27107F5700CB46E0 /* DdayCreatorViewController.swift in Sources */,
 				DD58912A27107BFB00CB46E0 /* AppDelegate.swift in Sources */,
+				DD58914A27119AD500CB46E0 /* UIColor+getRandomColor.swift in Sources */,
 				DD5891402710827B00CB46E0 /* DdayCollectionViewCell.swift in Sources */,
 				DD58912C27107BFB00CB46E0 /* SceneDelegate.swift in Sources */,
 				DD5891462711768E00CB46E0 /* Dday.swift in Sources */,
@@ -304,7 +368,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WL7H63J22B;
-				INFOPLIST_FILE = DdayCounter/Info.plist;
+				INFOPLIST_FILE = DdayCounter/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +377,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.woozzang.DdayCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -323,7 +388,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WL7H63J22B;
-				INFOPLIST_FILE = DdayCounter/Info.plist;
+				INFOPLIST_FILE = DdayCounter/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,7 +397,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.woozzang.DdayCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

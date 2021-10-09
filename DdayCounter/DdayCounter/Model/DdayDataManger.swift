@@ -11,15 +11,9 @@ final class DdayDataManger {
   
   static let shared: DdayDataManger = DdayDataManger()
   
-  private(set) var ddayList: [Dday] = []
+  private(set) var ddayList: [Dday] = [ ]
   
-  private init() {
-//    ddayList = [ Dday(title: "생일", anchorDate: Date()),
-//                 Dday(title: "100일", anchorDate: Date()),
-//                 Dday(title: "개강", anchorDate: Date()),
-//                 Dday(title: "종강", anchorDate: Date())
-//  ]
-  }
+  private init() { }
   
   func fetchDday(at index: Int) -> Dday?{
     

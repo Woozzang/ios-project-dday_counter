@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DBq-FM-kNd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -18,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="etE-B7-5WI">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="etE-B7-5WI">
                                 <rect key="frame" x="20" y="64" width="374" height="405"/>
                                 <color key="backgroundColor" red="0.80392156859999997" green="0.8980392157" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -71,7 +72,7 @@
                         <imageReference key="selectedImage" image="plus" catalog="system" symbolScale="default"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="datePicker" destination="etE-B7-5WI" id="J4i-Wh-Ibi"/>
+                        <outlet property="datePicker" destination="etE-B7-5WI" id="SuJ-sO-yb6"/>
                         <outlet property="dayNameTextField" destination="tkE-ci-Y1J" id="vgB-SI-Pdx"/>
                         <outlet property="registerButton" destination="SQH-oc-cDY" id="L45-L1-7ST"/>
                     </connections>
@@ -99,7 +100,7 @@
             </objects>
             <point key="canvasLocation" x="-52.173913043478265" y="88.392857142857139"/>
         </scene>
-        <!--Dday Collection View Controller-->
+        <!--D-day-->
         <scene sceneID="NGg-Fz-2vn">
             <objects>
                 <collectionViewController id="RvU-gZ-fHp" customClass="DdayCollectionViewController" customModule="DdayCounter" customModuleProvider="target" sceneMemberID="viewController">
@@ -133,15 +134,15 @@
                                             <color key="textColor" red="0.95677906270000002" green="0.95691639179999999" blue="0.956749022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfk-g0-53Q">
-                                            <rect key="frame" x="72" y="70" width="48" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfk-g0-53Q">
+                                            <rect key="frame" x="8" y="70" width="176" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                             <color key="textColor" red="0.95677906270000002" green="0.95691639179999999" blue="0.956749022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sX-O6-xuy">
-                                            <rect key="frame" x="83" y="96" width="26.5" height="12"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sX-O6-xuy">
+                                            <rect key="frame" x="82.5" y="96" width="27" height="12"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
                                             <color key="textColor" red="0.95677906270000002" green="0.95691639179999999" blue="0.956749022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -173,7 +174,7 @@
                             <outlet property="delegate" destination="RvU-gZ-fHp" id="PxJ-AT-nBA"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" systemItem="topRated" id="EiA-Mb-Z5P"/>
+                    <tabBarItem key="tabBarItem" title="D-day" selectedImage="heart" catalog="system" id="EiA-Mb-Z5P"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yeM-7l-JMe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -181,6 +182,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

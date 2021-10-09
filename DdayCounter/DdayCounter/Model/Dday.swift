@@ -13,11 +13,11 @@ struct Dday {
     
     get {
       
-      let now = Date()
+      let today = DateFormatter().timeToZero(Date())
       
-      let distance = (anchorDate.timeIntervalSince(now) / ( 60 * 60 * 24)).rounded(.down)
-      
-      return Int(distance)
+      let distanceFromToday = (anchorDate.timeIntervalSince(today) / ( 60 * 60 * 24))
+
+      return Int(distanceFromToday)
     }
   }
   
