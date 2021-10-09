@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		DD58912A27107BFB00CB46E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58912927107BFB00CB46E0 /* AppDelegate.swift */; };
 		DD58912C27107BFB00CB46E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58912B27107BFB00CB46E0 /* SceneDelegate.swift */; };
-		DD58912E27107BFB00CB46E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58912D27107BFB00CB46E0 /* ViewController.swift */; };
 		DD58913127107BFB00CB46E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD58912F27107BFB00CB46E0 /* Main.storyboard */; };
 		DD58913327107BFE00CB46E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD58913227107BFE00CB46E0 /* Assets.xcassets */; };
 		DD58913627107BFE00CB46E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD58913427107BFE00CB46E0 /* LaunchScreen.storyboard */; };
+		DD58913E27107F5700CB46E0 /* DdayCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58913D27107F5700CB46E0 /* DdayCreatorViewController.swift */; };
+		DD5891402710827B00CB46E0 /* DdayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58913F2710827B00CB46E0 /* DdayCollectionViewCell.swift */; };
+		DD589142271083CF00CB46E0 /* DdayCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD589141271083CF00CB46E0 /* DdayCollectionViewController.swift */; };
+		DD589144271175CF00CB46E0 /* DdayDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD589143271175CF00CB46E0 /* DdayDataManger.swift */; };
+		DD5891462711768E00CB46E0 /* Dday.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5891452711768E00CB46E0 /* Dday.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DD58912627107BFB00CB46E0 /* DdayCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DdayCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD58912927107BFB00CB46E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD58912B27107BFB00CB46E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DD58912D27107BFB00CB46E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD58913027107BFB00CB46E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD58913227107BFE00CB46E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD58913527107BFE00CB46E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD58913727107BFE00CB46E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD58913D27107F5700CB46E0 /* DdayCreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayCreatorViewController.swift; sourceTree = "<group>"; };
+		DD58913F2710827B00CB46E0 /* DdayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayCollectionViewCell.swift; sourceTree = "<group>"; };
+		DD589141271083CF00CB46E0 /* DdayCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayCollectionViewController.swift; sourceTree = "<group>"; };
+		DD589143271175CF00CB46E0 /* DdayDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayDataManger.swift; sourceTree = "<group>"; };
+		DD5891452711768E00CB46E0 /* Dday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dday.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +66,15 @@
 			children = (
 				DD58912927107BFB00CB46E0 /* AppDelegate.swift */,
 				DD58912B27107BFB00CB46E0 /* SceneDelegate.swift */,
-				DD58912D27107BFB00CB46E0 /* ViewController.swift */,
 				DD58912F27107BFB00CB46E0 /* Main.storyboard */,
 				DD58913227107BFE00CB46E0 /* Assets.xcassets */,
 				DD58913427107BFE00CB46E0 /* LaunchScreen.storyboard */,
 				DD58913727107BFE00CB46E0 /* Info.plist */,
+				DD58913D27107F5700CB46E0 /* DdayCreatorViewController.swift */,
+				DD58913F2710827B00CB46E0 /* DdayCollectionViewCell.swift */,
+				DD589141271083CF00CB46E0 /* DdayCollectionViewController.swift */,
+				DD589143271175CF00CB46E0 /* DdayDataManger.swift */,
+				DD5891452711768E00CB46E0 /* Dday.swift */,
 			);
 			path = DdayCounter;
 			sourceTree = "<group>";
@@ -137,9 +149,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD58912E27107BFB00CB46E0 /* ViewController.swift in Sources */,
+				DD58913E27107F5700CB46E0 /* DdayCreatorViewController.swift in Sources */,
 				DD58912A27107BFB00CB46E0 /* AppDelegate.swift in Sources */,
+				DD5891402710827B00CB46E0 /* DdayCollectionViewCell.swift in Sources */,
 				DD58912C27107BFB00CB46E0 /* SceneDelegate.swift in Sources */,
+				DD5891462711768E00CB46E0 /* Dday.swift in Sources */,
+				DD589142271083CF00CB46E0 /* DdayCollectionViewController.swift in Sources */,
+				DD589144271175CF00CB46E0 /* DdayDataManger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
