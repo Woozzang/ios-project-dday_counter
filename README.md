@@ -1,6 +1,9 @@
 # DdayCounter
 
-<img src = "/Resources/main.png">
+<img src = "/Resources/main_1.png">
+<br />
+
+<img src = "/Resources/main_2.png">
 <br />
 
 ## 사용 요소 및 개념
